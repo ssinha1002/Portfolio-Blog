@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/82c5f7bf6d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="#">Saswati</a></div>
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line menu-icon"></i>
+            </label>
+            <input type="checkbox" name="check" id="check" />
+            <ul>
+                <li><a href="#home" ng-click="scrollToSection('home')">Home</a></li>
+                <li><a href="#about" ng-click="scrollToSection('about')">About</a></li>
+                <li><a href="#mywork" ng-click="scrollToSection('mywork')">Portfolio</a></li>
+                <li><a href="#contact" ng-click="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+<!------------------------------------------------------------------------------home---------------------------------------------------------->
+    <section id="home" class="section">
+        <div class="section__container">
+            <div class="content">
+                <p class="subtitle">HELLO</p>
+                <h1 class="title">
+                    I'm <span>Saswati<br />a</span> Computer Engineering Student
+                </h1>
+                <p class="description">
+                  I'm Saswati Sinha, currently in my 3rd year pursuing MBA Tech in Computers at NMIMS Mukesh Patel School of Technology Management and Engineering. My passion lies in the realms of Data Science and Web Development.
+                </p>
+                <div class="action__btns">
+                    <a href="SaswatiSinha_Computer.pdf" download="SaswatiSinha_Computer.pdf">
+                        <button class="my_cv">My CV</button>
+                    </a>
+                    <button class="portfolio" ng-click="scrollToSection('mywork')">View Portfolio</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="Images/Formalpic.jpg" alt="profile" />
+            </div>
+        </div>
+    </section>
+<!------------------------------------------------------------------------------------------------about me-------------------------------------------------------------------------->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Casualpic.jpg" alt="Profile Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="description"> I excel in collaborative settings, I'm well-known for my adept decision-making, effective communication, and strong sense of responsibility. I'm on the lookout for a challenging role where I can leverage my analytical skills to contribute to cutting-edge, data-driven solutions.</p>
+
+                    <div class="tabtitles">
+                        <p class="tablinks activelink" ng-click="opentab('skills')">Skills</p>
+                        <p class="tablinks" ng-click="opentab('education')">Education</p>  
+                    </div>
+
+                    <div class="tabcontents activetab" id="skills">
+                        <span><b>Technical Skills</b></span>
+                        <ol>
+                            <li ng-repeat="x in Tech" class="description">{{x}}</li>
+                        </ol>
+                        <br>
+                        <br>
+                        <span><b>Non-Technical Skills</b></span>
+                        <ol>
+                            <li ng-repeat="x in NonTech" class="description">{{x}}</li>
+                        </ol>
+                    </div>
+
+                    <div class="tabcontents activetab" id="education">
+                      <ol>
+                          <li><b>2021-2026</b><p class="description">MBA Tech in Computer Engineering from Mukesh Patel School of Technology Management, Mumbai</p></li>
+                          <li><b>2020-2021</b><p class="description">12th CBSE Boards from Suraj Bhan DAV Public School, New Delhi</p></li>
+                          <li><b>2018-2019</b><p class="description">10th CBSE Boards from Suraj Bhan DAV Public School, New Delhi</p></li>
+                      </ol>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-------------------------------------------------------------------------------------------Portfolio------------------------------------------------------------------------------------->
+    <section id="mywork" class="section">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="Images/work1.png" alt="Work 1">
+                    <div class="layer">
+                        <h3>Aniflix- Netflix Clone</h3>
+                        <p>Aniflix is a cutting-edge streaming platform, designed as a clone of Netflix, that delivers an immersive movie and TV show-watching experience to users.</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work2.png" alt="Work 2">
+                    <div class="layer">
+                        <h3>Woman Empowerment Website</h3>
+                        <p>Our platform is dedicated to empowering women from all walks of life by providing them with resources, tools, and a supportive community to help them achieve their goals and reach their full potential.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work3.png" alt="Work 3">
+                    <div class="layer">
+                        <h3>Coming Soon Page</h3>
+                        <p>Designed a sign-up page to offer a range of content, including articles, blogs, newsletters.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btnn"><b>See More</b></a>
+        </div>
+    </section>
+<!--------------------------------------------------------------------------------contact------------------------------------------------------------------------->
+    <div id="contact" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>sinhasaswati52@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7738472069</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/saswati.sinhaa/#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/saswati-sinha-13956b234"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" placeholder="Your Name" name="Name" required>
+                        <input type="email" placeholder="Your Email" name="email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btnn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright @Saswati. Portfolio Blog</p>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+            $scope.NonTech = ["Teamwork", "Collaboration", "Organizational Skills", "Result oriented"];
+            $scope.Tech = ["Programming Languages: Python, HTML, CSS, JavaScript", "Database Management: SQL, MongoDB", "Software/ Tools: SAS, VS code, TASM, Proteus"];
+
+            $scope.scrollToSection = function(sectionId) {
+                $location.hash(sectionId);
+                $anchorScroll();
+            };
+
+            $scope.opentab = function(tabname) {
+                var tablinks = document.getElementsByClassName('tablinks');
+                var tabcontents = document.getElementsByClassName('tabcontents');
+
+                for (var i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("activelink");
+                }
+
+                for (var i = 0; i < tabcontents.length; i++) {
+                    tabcontents[i].classList.remove("activetab");
+                }
+
+                event.currentTarget.classList.add("activelink");
+                document.getElementById(tabname).classList.add("activetab");
+            };
+        }]);
+    </script>
+
+</body>
+</html>
